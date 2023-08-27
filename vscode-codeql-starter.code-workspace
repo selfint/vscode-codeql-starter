@@ -23,6 +23,9 @@
 		},
 		{
 			"path": "ql"
+		},
+		{
+			"path": "my-app"
 		}
 	],
 	"settings": {
