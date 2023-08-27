@@ -1,18 +1,21 @@
 package com.mycompany.app;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
+import java.util.logging.*;
+
+public class App {
     private static String getSecret() {
-        return "The answer to life is 42";
+        return "secret";
     }
     
-    public static void main( String[] args )
-    {
-        String secret = getSecret();
-        System.out.println( "The secret is: " + secret );
+    public static void main( String[] args ) {
+        Logger logger = Logger.getLogger("logger");
+
+        String password = getSecret();
+
+        // BAD: user password is written to debug log
+        logger.info("User password is " + password);
+
+        // GOOD: user password is never written to debug log
+        logger.info("User password changed");
     }
 }

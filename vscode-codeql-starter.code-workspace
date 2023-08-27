@@ -26,6 +26,17 @@
 		},
 		{
 			"path": "my-app"
+		},
+		{
+			"name": "[codeql-db source archive]",
+			"uri": "codeql-zip-archive://0-51/workspaces/vscode-codeql-starter/codeql-db/src.zip"
+		},
+		{
+			"name": "Quick Queries",
+			"path": "../../home/codespace/.vscode-remote/data/User/workspaceStorage/-2ec83b53/GitHub.vscode-codeql/quick-queries"
+		},
+		{
+			"path": "my-queries"
 		}
 	],
 	"settings": {
