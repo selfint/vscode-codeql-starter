@@ -11,6 +11,6 @@ jq_cmd=".runs[0].results[$results].codeFlows[0].threadFlows[0].locations | .[] |
 cat $t \
 | jq "$jq_cmd" \
 | awk -v src=$src '{ \
-print "sed -n -e $((" $1 "-2)),$((" $1 "+2))p " src " \
+print "cat --number " src " | sed -n -e $((" $1 "-2)),$((" $1 "+2))p \
 | grep --color=always -e \"^\" -e \"$(sed -n -e " $1 "p " src ")\" \
-&& echo ---" }'
+&& echo -------------------------------------------------------------" }'
