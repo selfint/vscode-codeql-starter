@@ -1,0 +1,12 @@
+    31	
+    32	        // BAD: user password is written to debug log
+    33	[01;31m[K        logger.info("User password is " + password);[m[K
+    34	
+    35	        // GOOD: user password is never written to debug log
+-------------------------------------------------------------
+    31	
+    32	        // BAD: user password is written to debug log
+    33	[01;31m[K        logger.info("User password is " + password);[m[K
+    34	
+    35	        // GOOD: user password is never written to debug log
+-------------------------------------------------------------

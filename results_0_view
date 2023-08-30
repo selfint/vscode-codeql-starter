@@ -1,0 +1,42 @@
+    27	        String password = getSecret();
+    28	
+    29	[01;31m[K        String string = method2(password);[m[K
+    30	        method(string);
+    31	
+-------------------------------------------------------------
+    18	    }
+    19	
+    20	[01;31m[K    private static String method2(String string) {[m[K
+    21	        return string + "!";
+    22	    }
+-------------------------------------------------------------
+    19	
+    20	    private static String method2(String string) {
+    21	[01;31m[K        return string + "!";[m[K
+    22	    }
+    23	    
+-------------------------------------------------------------
+    27	        String password = getSecret();
+    28	
+    29	[01;31m[K        String string = method2(password);[m[K
+    30	        method(string);
+    31	
+-------------------------------------------------------------
+    28	
+    29	        String string = method2(password);
+    30	[01;31m[K        method(string);[m[K
+    31	
+    32	        // BAD: user password is written to debug log
+-------------------------------------------------------------
+     8	    }
+     9	
+    10	[01;31m[K    private static void method(String string) {[m[K
+    11	        Logger logger = Logger.getLogger("logger");
+    12	
+-------------------------------------------------------------
+    12	
+    13	        // BAD: user password is written to debug log
+    14	[01;31m[K        logger.info("Some value is " + string);[m[K
+    15	
+    16	        // GOOD: user password is never written to debug log
+-------------------------------------------------------------
